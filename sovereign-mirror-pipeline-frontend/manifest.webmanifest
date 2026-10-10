@@ -1,0 +1,10 @@
+{
+  "name": "Sovereign Mirror Pipeline",
+  "short_name": "Sovereign Mirror",
+  "description": "Local-first source capture, validation, build and release governance.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0e1a",
+  "theme_color": "#0a0e1a",
+  "icons": []
+}
