@@ -1,6 +1,6 @@
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import {
-  Activity, Archive, ArrowDownToLine, ArrowLeft, ArrowRight, Box, Check,
+  Activity, Archive, ArrowDownToLine, ArrowLeft, ArrowRight, Box, Check, CheckCircle2,
   ChevronRight, Circle, Clock3, Cloud, Code2, FileArchive, Folder, GitBranch,
   Home, Layers3, LockKeyhole, Package, Play, RotateCcw, ScanSearch, Shield, ShieldCheck,
   Terminal, X, Zap
@@ -34,7 +34,6 @@ function App() {
   const [screen, setScreen] = useState<Screen>('home');
   const [source, setSource] = useState('Lovable');
   const [selectedRelease, setSelectedRelease] = useState('v2.3.0');
-  const [environment, setEnvironment] = useState('Development');
   const [notice, setNotice] = useState('');
   const [approved, setApproved] = useState(false);
   const [rejected, setRejected] = useState(false);
@@ -48,12 +47,6 @@ function App() {
     { id: 'approvals', label: 'Approvals', icon: ShieldCheck },
     { id: 'rollback', label: 'Rollback', icon: RotateCcw },
   ];
-
-  const title = useMemo(() => ({
-    home: 'Sovereign Mirror', sources: 'Sources', pipeline: 'Pipeline detail',
-    approvals: 'Approval gate', rollback: 'Rollback', security: 'Security scan',
-    artifacts: 'Artifacts',
-  }[screen]), [screen]);
 
   function showNotice(message: string) {
     setNotice(message);
